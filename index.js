@@ -19,9 +19,14 @@ function main() {
           break;
     
 
-    case 'showAllTasks':
-      taskDisplay.showAllTasks();
-      break;
+        case 'showAllTasks':
+            taskDisplay.showAllTasks();
+            break;
+
+        case 'deleteTask':
+            const deleteTaskTitle = args[1];
+            taskManager.deleteTask(deleteTaskTitle);
+            break;
 
     default:
         console.log('Невідома команда');
