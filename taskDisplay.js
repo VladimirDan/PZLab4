@@ -1,5 +1,9 @@
 'use strict'
 
+const taskDisplay = require('./taskDisplay');
+const taskManager = require('./taskManager');
+const dataStorage = require('./dataStorage');
+
 
 function displayMenu() {
   console.log('==== Task Manager ====');
@@ -13,6 +17,16 @@ function displayMenu() {
   console.log('8. Exit');
 }
 
+function showAllTasks() {
+    const tasks = dataStorage.getAllTasks();
+    console.log('All Tasks:');
+    for (const task of tasks) {
+      console.log(`- ${task.title} (Deadline: ${task.deadline})`);
+    }
+  }
+
+
 module.exports = {
-    displayMenu
+    displayMenu,
+    showAllTasks,
   };
