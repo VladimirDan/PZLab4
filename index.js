@@ -1,3 +1,10 @@
 'use strict'
 
-console.log(`aaa`);
+
+const taskDisplay = require('./taskDisplay');
+
+function main() {
+  taskDisplay.displayMenu();
+}
+
+main();
