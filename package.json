@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/VladimirDan/PZLab4/issues"
   },
-  "homepage": "https://github.com/VladimirDan/PZLab4#readme"
+  "homepage": "https://github.com/VladimirDan/PZLab4#readme",
+  "dependencies": {
+    "moment": "^2.29.4"
+  }
 }
