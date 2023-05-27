@@ -14,17 +14,21 @@ function main() {
           const title = args[1];
           const description = args[2];
           const deadline = new Date(Date.parse(args[3]));
-          console.log(args[3]);
           taskManager.addTask(title, description, deadline);
           break;
     
 
-    case 'showAllTasks':
-      taskDisplay.showAllTasks();
-      break;
+        case 'showAllTasks':
+        taskDisplay.showAllTasks();
+        break;
 
-    default:
-        console.log('Невідома команда');
+        case 'deleteTask':
+            const deleteTaskId = args[1];
+            taskManager.deleteTask(deleteTaskId);
+            break;
+
+        default:
+            console.log('Невідома команда');
     }
 }
 
