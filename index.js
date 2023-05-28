@@ -18,8 +18,9 @@ function main() {
           break;
     
 
-        case 'showAll':
-            taskDisplay.showAllTasks();
+        case 'show':
+            const taskType = args[1];
+            taskDisplay.show(taskType);
             break;
 
         case 'delete':

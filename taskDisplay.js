@@ -17,16 +17,40 @@ function displayMenu() {
   console.log('8. Exit');
 }
 
-function showAllTasks() {
+function show(type) {
     const tasks = dataStorage.getAllTasks();
-    console.log('All Tasks:');
-    for (const task of tasks) {
-      console.log(`- ${task.title} (Deadline: ${task.deadline})`);
+    switch (type) {
+      case 'all':
+        for (const task of tasks) {
+            console.log('All Tasks:');
+            for (const task of tasks) {
+              console.log(`- ${task.title} (Deadline: ${task.deadline})`);
+            }
+        }
+        break;
+
+      case 'completed':
+        const completedTasks = tasks.filter(task => task.completed);
+        for (const task of completedTasks) {
+            console.log(`- ${task.title} (Deadline: ${task.deadline})`);
+          }
+        break;
+
+      case 'overdue':
+        const currentDate = new Date();
+        const overdueTasks = tasks.filter(task => !task.completed && task.deadline < currentDate);
+        for (const task of overdueTasks) {
+            console.log(`- ${task.title} (Deadline: ${task.deadline})`);
+          }
+        break;
+        
+      default:
+        console.log('Invalid task type.');
     }
   }
 
 
 module.exports = {
     displayMenu,
-    showAllTasks,
+    show,
   };
