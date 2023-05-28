@@ -18,7 +18,7 @@ function main() {
           break;
     
 
-        case 'show all':
+        case 'showAll':
             taskDisplay.showAllTasks();
             break;
 
