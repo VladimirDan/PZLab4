@@ -13,11 +13,22 @@ function addTask(title, description, deadline) {
   dataStorage.saveTask(task);
 }
 
-function deleteTask(id) {
-    dataStorage.deleteTask(id);
+function deleteTask(title) {
+    dataStorage.deleteTask(title);
+  }
+
+function editTask(taskTitle, updatedTask) {
+    dataStorage.updateTask(taskTitle, updatedTask);
+}
+
+function getTaskByTitle(title) {
+    const tasks = dataStorage.getAllTasks();
+    return tasks.find(task => task.title === title);
   }
 
 module.exports = {
     addTask,
     deleteTask,
+    editTask,
+    getTaskByTitle,
   };

@@ -3,7 +3,7 @@
 
 const taskDisplay = require('./taskDisplay');
 const taskManager = require('./taskManager');
-
+const dataStorage = require('./dataStorage');
 
 function main() {
     const args = process.argv.slice(2);
@@ -27,9 +27,28 @@ function main() {
             taskManager.deleteTask(deleteTaskTitle);
             break;
 
-    default:
-        console.log('Unknown command');
-    }
+        case 'editTask':
+            const taskTitle = args[1];
+            const existingTask = taskManager.getTaskByTitle(taskTitle);
+            if (!existingTask) {
+                console.log('Task not found.');
+                break;
+            }
+            
+            const updatedTask = {
+                title: args[2] || existingTask.title,
+                description: args[3] || existingTask.description,
+                deadline: args[4] || existingTask.deadline,
+                completed: existingTask.completed,
+                completedDate: existingTask.completedDate,
+            };
+            
+            taskManager.editTask(taskTitle, updatedTask);
+            break;
+
+        default:
+            console.log('Unknown command');
+        }
 }
 
 main();

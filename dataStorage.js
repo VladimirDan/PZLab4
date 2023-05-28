@@ -35,21 +35,27 @@ function getAllTasks() {
     return loadTasks();
 }
 
-  function deleteTask(title) {
+function deleteTask(title) {
     const tasks = loadTasks();
     const index = tasks.findIndex(task => task.title === title);
     if (index !== -1) {
-      tasks.splice(index, 1);
-      saveTasks(tasks);
-      console.log('Task deleted successfully.');
+        tasks.splice(index, 1);
+        saveTasks(tasks);
+        console.log('Task deleted successfully.');
     } else {
-      console.log('Task not found.');
+        console.log('Task not found.');
     }
   }
 
+function updateTask(taskTitle, updatedTask) {
+    const tasks = loadTasks();
+    tasks[tasks.findIndex(task => task.title === taskTitle)] = updatedTask;
+    saveTasks(tasks);
+  }
 
   module.exports = {
     saveTask,
     getAllTasks,
     deleteTask,
+    updateTask,
   };
