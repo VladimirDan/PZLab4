@@ -13,8 +13,8 @@ function addTask(title, description, deadline) {
   dataStorage.saveTask(task);
 }
 
-function deleteTask(title) {
-    dataStorage.deleteTask(title);
+function deleteTask(id) {
+    dataStorage.deleteTask(id);
   }
 
 module.exports = {

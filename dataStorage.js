@@ -31,9 +31,9 @@ function saveTask(task) {
     saveTasks(tasks);
   }
 
-  function getAllTasks() {
+function getAllTasks() {
     return loadTasks();
-  }
+}
 
   function deleteTask(title) {
     const tasks = loadTasks();
