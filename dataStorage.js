@@ -31,13 +31,25 @@ function saveTask(task) {
     saveTasks(tasks);
   }
 
-  function getAllTasks() {
+function getAllTasks() {
     return loadTasks();
-  }
+}
 
+  function deleteTask(title) {
+    const tasks = loadTasks();
+    const index = tasks.findIndex(task => task.title === title);
+    if (index !== -1) {
+      tasks.splice(index, 1);
+      saveTasks(tasks);
+      console.log('Task deleted successfully.');
+    } else {
+      console.log('Task not found.');
+    }
+  }
 
 
   module.exports = {
     saveTask,
     getAllTasks,
+    deleteTask,
   };

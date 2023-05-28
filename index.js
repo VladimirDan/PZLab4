@@ -19,12 +19,17 @@ function main() {
           break;
     
 
-    case 'showAllTasks':
-      taskDisplay.showAllTasks();
-      break;
+        case 'show all':
+            taskDisplay.showAllTasks();
+            break;
+
+        case 'delete':
+            const deleteTaskTitle = args[1];
+            taskManager.deleteTask(deleteTaskTitle);
+            break;
 
     default:
-        console.log('Невідома команда');
+        console.log('Unknown command');
     }
 }
 
