@@ -19,11 +19,11 @@ function main() {
           break;
     
 
-        case 'showAllTasks':
+        case 'show all':
             taskDisplay.showAllTasks();
             break;
 
-        case 'deleteTask':
+        case 'delete':
             const deleteTaskTitle = args[1];
             taskManager.deleteTask(deleteTaskTitle);
             break;
