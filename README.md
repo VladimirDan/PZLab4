@@ -1,8 +1,11 @@
 # Task Manager
 
+## [Design document](https://docs.google.com/document/d/1wOZQT3JZNSvGeP0AkZhOKvR5OAstvrzG/edit?usp=share_link&ouid=112528746514985709552&rtpof=true&sd=true)
+
 ## Description
 
 The Task Manager is a command-line application that allows you to manage your tasks and deadlines. You can add tasks, edit them, mark them as completed, and delete tasks. 
+
 
 ## Installation
 
