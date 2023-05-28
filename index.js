@@ -29,7 +29,7 @@ function main() {
             break;
 
     default:
-        console.log('Невідома команда');
+        console.log('Unknown command');
     }
 }
 
