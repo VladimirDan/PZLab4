@@ -3,6 +3,12 @@
 const dataStorage = require('./dataStorage');
 
 function addTask(title, description, deadline) {
+  const existingTask = getTaskByTitle(title);
+  if (existingTask) {
+    console.log('Task with the same title already exists');
+    return;
+  }
+
   const task = {
     title,
     description,
@@ -18,7 +24,7 @@ function deleteTask(title) {
 }
 
 function editTask(taskTitle, updatedTask) {
-    dataStorage.updateTask(taskTitle, updatedTask);
+  dataStorage.updateTask(taskTitle, updatedTask);
 }
 
 function getTaskByTitle(title) {
