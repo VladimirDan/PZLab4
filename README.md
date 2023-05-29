@@ -25,33 +25,43 @@ To run the application, open the terminal and navigate to the project directory.
 
 - To add a task:
 
-node index.js add <title> <description> <deadline>
+  ```
+  node index.js add <title> <description> <deadline>
+  ```
 
-Replace `<title>`, `<description>`, and `<deadline>` with the respective details of the task.
+  Replace `<title>`, `<description>`, and `<deadline>` with the respective details of the task.
 
 - To show tasks:
 
-node index.js show <taskType>
+  ```
+  node index.js show <taskType>
+  ```
 
-Replace `<taskType>` with one of the following options:
+  Replace `<taskType>` with one of the following options:
   - `all`: Show all tasks.
   - `completed`: Show completed tasks.
   - `overdue`: Show overdue tasks.
   - `incompleted`: Show incompleted tasks.
 - To delete a task:
 
-node index.js delete <title>
+  ```
+  node index.js delete <title>
+  ```
 
-Replace `<title>` with the title of the task you want to delete.
+  Replace `<title>` with the title of the task you want to delete.
 
 - To edit a task:
 
-node index.js edit <title> [<newTitle>] [<newDescription>] [<newDeadline>]
+  ```
+  node index.js edit <title> [<newTitle>] [<newDescription>] [<newDeadline>]
+  ```
 
-Replace `<title>` with the title of the task you want to edit. Optional parameters `<newTitle>`, `<newDescription>`, and `<newDeadline>` can be provided to update the respective details of the task.
+  Replace `<title>` with the title of the task you want to edit. Optional parameters `<newTitle>`, `<newDescription>`, and `<newDeadline>` can be provided to update the respective details of the task.
 
 - To mark a task as completed:
 
-node index.js finish <title>
+  ```
+  node index.js finish <title>
+  ```
 
-Replace `<title>` with the title of the task you want to mark as completed.
+  Replace `<title>` with the title of the task you want to mark as completed.
