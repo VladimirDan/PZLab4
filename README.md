@@ -25,7 +25,7 @@ To run the application, open the terminal and navigate to the project directory.
 
 - To add a task:
 
-node index.js addTask <title> <description> <deadline>
+node index.js add <title> <description> <deadline>
 
 Replace `<title>`, `<description>`, and `<deadline>` with the respective details of the task.
 
@@ -46,7 +46,7 @@ Replace `<title>` with the title of the task you want to delete.
 
 - To edit a task:
 
-node index.js editTask <title> [<newTitle>] [<newDescription>] [<newDeadline>]
+node index.js edit <title> [<newTitle>] [<newDescription>] [<newDeadline>]
 
 Replace `<title>` with the title of the task you want to edit. Optional parameters `<newTitle>`, `<newDescription>`, and `<newDeadline>` can be provided to update the respective details of the task.
 

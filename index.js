@@ -8,7 +8,7 @@ function main() {
   const args = process.argv.slice(2);
   const command = args[0];
 
-  if (command === 'addTask') {
+  if (command === 'add') {
     const title = args[1];
     const description = args[2];
     const deadline = new Date(Date.parse(args[3]));
@@ -19,7 +19,7 @@ function main() {
   } else if (command === 'delete') {
     const title = args[1];
     taskManager.deleteTask(title);
-  } else if (command === 'editTask') {
+  } else if (command === 'edit') {
     const title = args[1];
     const existingTask = taskManager.getTaskByTitle(title);
     if (!existingTask) {
